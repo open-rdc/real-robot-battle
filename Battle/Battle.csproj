@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{977B9C33-F075-48C2-A1F4-48A9240580C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Battle</RootNamespace>
+    <AssemblyName>Battle</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMotionProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBattle.Designer.cs">
+      <DependentUpon>FormBattle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransform.Designer.cs">
+      <DependentUpon>FormTransform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBattle.resx">
+      <DependentUpon>FormBattle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransform.resx">
+      <DependentUpon>FormTransform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDistance.resx">
+      <DependentUpon>PanelDistance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelURG.resx">
+      <DependentUpon>PanelURG.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxAttackPoint.resx">
+      <DependentUpon>PictureBoxAttackPoint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PanelURG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelURG.Designer.cs">
+      <DependentUpon>PanelURG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDistance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelDistance.Designer.cs">
+      <DependentUpon>PanelDistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxAttackPoint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PictureBoxAttackPoint.Designer.cs">
+      <DependentUpon>PictureBoxAttackPoint.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InverseKinematics\InverseKinematics.csproj">
+      <Project>{A21F7100-59BB-47F8-937A-8A03EDDCFF9F}</Project>
+      <Name>InverseKinematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Joystick\Joystick.csproj">
+      <Project>{9E5220E1-FA5F-453F-B831-B6EABBDD1463}</Project>
+      <Name>Joystick</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mechanum\Mechanum.csproj">
+      <Project>{1ABA43BD-250A-4D58-9B9E-FA71B9125519}</Project>
+      <Name>Mechanum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MotionControl\MotionControl.csproj">
+      <Project>{81D65E4A-0851-4A36-AA1B-DDB086D29DFB}</Project>
+      <Name>MotionControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\network\network.csproj">
+      <Project>{488FE80D-05B3-4325-96F6-197C827270A4}</Project>
+      <Name>network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RS405CB\RS405CB.csproj">
+      <Project>{6C0CCE7E-691B-4C7A-BD41-29BCF2FCD2FF}</Project>
+      <Name>RS405CB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sound\sound.csproj">
+      <Project>{73EF66F2-EA75-479C-8128-7844ABDDD731}</Project>
+      <Name>sound</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\URG\URG.csproj">
+      <Project>{2A627F80-27F0-4884-9668-4A74BD2D9D6D}</Project>
+      <Name>URG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USBCamera\USBCamera.csproj">
+      <Project>{511E5ADE-63A1-4964-AB13-A06508CCE1A3}</Project>
+      <Name>USBCamera</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USBRelay\USBRelay.csproj">
+      <Project>{9AF6B95E-4068-444E-AB20-8818D5F47E27}</Project>
+      <Name>USBRelay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
